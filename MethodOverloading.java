@@ -1,24 +1,22 @@
-//BY CHANGING THE NUMBER OF ARGUMENT
+package OOPS.Polymorphism;
 
-package Method;
-
-import java.util.*;
 public class MethodOverloading {
-    public static void SumOfNumber(int a,int b){
-        int c=a+b;
-        System.out.println(c);
+    public static void main(String[] args) {
+        cal c= new cal();
+        c.sum(2,5);
+        c.sum((float)2.5,(float)2.6);
     }
-    public static void SumOfNumber(int a,int b,int c){
-        int sum=a+b+c;
-        System.out.println(sum);
+}
+
+
+
+class cal{
+
+    void sum(int a,int b){
+        System.out.println(a+b);
     }
 
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        int a= sc.nextInt();
-        int b=sc.nextInt();
-        int c= sc.nextInt();
-        SumOfNumber(a,b);
-        SumOfNumber(a,b,c);
+    void sum(float a,float b){
+        System.out.println(a+b);
     }
 }
